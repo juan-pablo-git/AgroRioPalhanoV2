@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('miltomm-morro-4887986_12801.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+/* escurecer imagem */
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* conteúdo */
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
+}
+
+/* título */
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.hero h1 span {
+  display: block;
+  font-style: italic;
+  color: #2ecc71; /* verde */
+  font-weight: 500;
+}
+
+/* texto */
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ddd;
+  font-family:  "Plus Jakarta Sans", sans-serif;
+}
+
+/* botões */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  font-family:  "Plus Jakarta Sans", sans-serif;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background: #27ae60;
+  color: white;
+}
+
+.btn.secondary {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  backdrop-filter: blur(4px);
+}
