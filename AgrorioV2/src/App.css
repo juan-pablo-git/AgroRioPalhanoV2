@@ -35,7 +35,8 @@
 .hero h1 span {
   display: block;
   font-style: italic;
-  color: #2ecc71; /* verde */
+  color: #2ecc71;
+  /* verde */
   font-weight: 500;
 }
 
@@ -45,14 +46,14 @@
   font-size: 18px;
   line-height: 1.5;
   color: #ddd;
-  font-family:  "Plus Jakarta Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* botões */
 .hero-buttons {
   display: flex;
   gap: 15px;
-  font-family:  "Plus Jakarta Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .btn {
@@ -69,7 +70,7 @@
 }
 
 .btn.secondary {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   backdrop-filter: blur(4px);
 }
@@ -77,12 +78,13 @@
 
 /* navbar geral */
 .navbar {
-  position: absolute; /* fica em cima do hero */
+  position: absolute;
+  /* fica em cima do hero */
   top: 0;
   width: 100%;
   z-index: 10;
-   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px); 
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
 }
 
 /* container */
@@ -127,7 +129,7 @@
 .navbar.sticky {
   position: fixed;
   background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -164,7 +166,7 @@
   font-size: 12px;
   letter-spacing: 2px;
   font-weight: 600;
-  font-family:  "Plus Jakarta Sans", sans-serif ;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .produto-texto h2 {
@@ -178,7 +180,7 @@
   display: block;
   color: #27ae60;
   font-style: italic;
-  font-weight: bold ;
+  font-weight: bold;
 }
 
 .produto-texto p {
@@ -191,4 +193,488 @@
 .produto-img {
   background: #ddd;
   padding: 40px;
+}
+
+/* Container da seção */
+.product-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+  /* Fundo claro para destacar o card */
+}
+
+/* O Card Verde */
+.product-card {
+  background-color: #115c34;
+  /* Verde escuro da Agrorio */
+  padding: 60px;
+  border-radius: 40px;
+  /* Bordas bem arredondadas como na imagem */
+  max-width: 900px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Label superior com a linha */
+.label-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.line {
+  height: 2px;
+  width: 50px;
+  background-color: #00b864;
+  /* Verde brilhante */
+}
+
+.label-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Títulos */
+.product-title {
+  font-family: 'Playfair Display', serif;
+  /* Fonte com serifa elegante */
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.product-highlight {
+  color: #4ade80;
+  /* Verde claro/menta para o destaque */
+  font-style: italic;
+}
+
+/* Texto de descrição */
+.product-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+  .product-card {
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .product-title {
+    font-size: 2.2rem;
+  }
+}
+
+
+.section-heranca {
+  padding: 120px 0;
+  background: #f5f5f5;
+}
+
+.heranca-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* TEXTO */
+.heranca-texto h2 {
+  font-size: 42px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.heranca-texto p {
+  color: #6c7a89;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heranca-texto h3 {
+  margin-top: 30px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #6c7a89;
+}
+
+/* VISUAL */
+.heranca-visual {
+  position: relative;
+  height: 350px;
+}
+
+/* bloco verde grande */
+.card-verde {
+  width: 100%;
+  height: 100%;
+  background: #dfeee6;
+  border-radius: 12px;
+}
+
+/* card branco sobreposto */
+.card-branco {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+
+  display: flex;
+  gap: 40px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-branco div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-branco strong {
+  font-size: 12px;
+}
+
+.card-branco span {
+  font-size: 12px;
+  color: #6c7a89;
+}
+
+
+.card-destaque {
+  background: linear-gradient(135deg, #1e6b3a, #14532d);
+  color: white;
+  padding: 60px;
+  border-radius: 20px;
+}
+
+/* GRID PRINCIPAL */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  /* mais espaço pro texto */
+  align-items: center;
+  gap: 40px;
+}
+
+/* TEXTO */
+.card-texto h2 {
+  font-size: 38px;
+  font-family: 'Playfair Display', serif;
+}
+
+.card-texto h2 span {
+  display: block;
+  color: #7ee2a8;
+  font-style: italic;
+}
+
+/* AREA 3D */
+.card-3d {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* mock só pra visualizar */
+.mock-3d {
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-contato {
+  padding: 120px 0;
+  background: #f5f5f5;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* TEXTO */
+.contato-info h2 {
+  font-size: 42px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.contato-info p {
+  color: #6c7a89;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-item {
+  margin-bottom: 15px;
+}
+
+.info-item span {
+  display: block;
+  font-size: 11px;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.info-item strong {
+  font-size: 14px;
+}
+
+/* FORM */
+.contato-form {
+  background: #e4f1ea;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* linha dupla */
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 20px;
+  background: #f0f0f0;
+  font-size: 12px;
+  outline: none;
+}
+
+/* textarea maior */
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* botão */
+button {
+  background: #0f1c2e;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.section-equipe {
+  padding: 120px 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+/* HEADER */
+.section-header span {
+  color: #27ae60;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  font-family: 'Playfair Display', serif;
+  margin: 10px 0;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: auto;
+  color: #6c7a89;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* GRID */
+.equipe-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.card-equipe {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card-equipe h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.card-equipe p {
+  font-size: 14px;
+  color: #6c7a89;
+  line-height: 1.6;
+}
+
+/* hover */
+.card-equipe:hover {
+  transform: translateY(-5px);
+}
+
+.footer {
+  background: linear-gradient(135deg, #021f14, #043524);
+  color: #dfeee6;
+  padding: 80px 60px 30px;
+  border-radius: 16px;
+  margin: 40px;
+}
+
+/* GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+}
+
+/* BRAND */
+.footer-brand h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.footer-brand span {
+  color: #27ae60;
+  font-size: 20px;
+}
+
+.footer-brand p {
+  color: #b7c9c0;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+/* ICONS */
+.footer-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icons a {
+  font-size: 18px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.footer-icons a:hover {
+  opacity: 1;
+}
+
+/* NAV + CONTACT */
+.footer-nav h4,
+.footer-contact h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #7ee2a8;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  color: #dfeee6;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #7ee2a8;
+}
+
+/* CONTACT */
+.footer-contact p {
+  margin-bottom: 15px;
+  color: #b7c9c0;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* EXTRA */
+.footer-extra {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+/* DOTS */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.green {
+  background: #27ae60;
+}
+
+.dot.blue {
+  background: #3498db;
+}
+
+.divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(255,255,255,0.3);
 }
