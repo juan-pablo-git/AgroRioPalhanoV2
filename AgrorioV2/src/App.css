@@ -315,12 +315,36 @@
   height: 350px;
 }
 
-/* bloco verde grande */
 .card-verde {
   width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
   height: 100%;
-  background: #dfeee6;
-  border-radius: 12px;
+  object-fit: cover;
+animation: fade 1s ease;
+ 
+}
+
+.carousel-image {
+  animation:
+    fade 1s ease,
+    zoom 6s linear;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
 }
 
 /* card branco sobreposto */

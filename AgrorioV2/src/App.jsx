@@ -1,10 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/miltomm-morro-4887986_12801.png'
 import './App.css'
+import img1 from './assets/img1.jpeg'
+import img2 from './assets/img2.jpeg'
+import img3 from './assets/img3.jpeg'
+import img4 from './assets/img4.jpeg'
+
 
 function App() {
+  const images = [img1, img2, img3, img4]
+
+  const [currentImage, setCurrentImage] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) =>
+        prev === images.length - 1 ? 0 : prev + 1
+      )
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <>
@@ -138,7 +157,14 @@ function App() {
 
               <div class="heranca-visual">
 
-                <div class="card-verde"></div>
+                <div className="card-verde">
+                  <img
+                    key={currentImage}
+                    src={images[currentImage]}
+                    alt=""
+                    className="carousel-image"
+                  />
+                </div>
 
                 <div class="card-branco">
                   <div>
