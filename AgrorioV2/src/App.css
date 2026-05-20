@@ -761,15 +761,39 @@ button:hover {
 
 .fade-section {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(80px);
+  will-change: opacity, transform;
 
   transition:
-    opacity 1s ease,
-    transform 1s ease;
+  opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+  transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* quando aparece */
 .fade-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.fade-delay {
+  transition-delay: 0.4s;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+/* FIREFOX */
+video {
+  pointer-events: none;
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  pointer-events: none;
+   appearance: none;
 }

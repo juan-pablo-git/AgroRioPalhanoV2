@@ -3,8 +3,9 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import FadeInSection from './components/FadeInSection'
-import heroImg from './assets/miltomm-morro-4887986_12801.png'
 import './App.css'
+import logoIMG from './assets/LogoAgrorio-removebg.png'
+import ovoVIDEO from './assets/OVO.mp4'
 import img1 from './assets/img1.jpeg'
 import img2 from './assets/img2.jpeg'
 import img3 from './assets/img3.jpeg'
@@ -32,21 +33,21 @@ function App() {
         <div class="nav-container">
 
           <div class="logo">
-            <img src="logo.png" alt="Logo" />
+            <img src={logoIMG} alt="Logo" />
           </div>
 
           <nav class="nav-menu">
-            <a href="#" class="active">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Produtos</a>
-            <a href="#">Contatos</a>
+            <a href="#hero" class="active">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#produto">Produtos</a>
+            <a href="#contato">Contatos</a>
           </nav>
 
         </div>
       </header>
       <div >
         <FadeInSection>
-          <section class="hero">
+          <section id='hero' class="hero">
             <div class="overlay"></div>
 
             <div class="hero-content">
@@ -69,13 +70,22 @@ function App() {
           </section>
         </FadeInSection>
         <FadeInSection>
-          <section class="section-produto">
+          <section id='produto' class="section-produto">
             <div class="container">
 
               <div class="produto-grid">
 
                 <div class="produto-img">
-                  <img src="ovo-caipira.jpg" alt="Ovo caipira" />
+                  <video
+                    width="100%"
+                    muted
+                    playsInline
+                    autoPlay
+                    preload="auto"
+                    poster={logoIMG}
+                    >
+                    <source src={ovoVIDEO} type="video/mp4" />
+                  </video>
                 </div>
 
                 <div class="produto-texto">
@@ -129,7 +139,7 @@ function App() {
           </section>
         </FadeInSection>
         <FadeInSection>
-          <section class="section-heranca">
+          <section id='sobre' class="section-heranca">
             <div class="container">
 
               <div class="heranca-grid">
@@ -197,7 +207,7 @@ function App() {
           </section >
         </FadeInSection>
         <FadeInSection>
-          <section class="section-contato">
+          <section id='contato' class="section-contato">
             <div class="container">
 
               <div class="contato-grid">

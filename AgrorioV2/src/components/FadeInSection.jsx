@@ -6,28 +6,26 @@ function FadeInSection({ children }) {
   const ref = useRef()
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      {
-        threshold: 0.2,
-      }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setIsVisible(entry.isIntersecting)
+    },
+    {
+      threshold: 0.2,
     }
+  )
 
-    return () => observer.disconnect()
-  }, [])
+  if (ref.current) {
+    observer.observe(ref.current)
+  }
+
+  return () => observer.disconnect()
+}, [])
 
   return (
     <div
       ref={ref}
-      className={`fade-section ${isVisible ? 'visible' : ''}`}
+      className={`fade-section fade-delay ${isVisible ? 'visible' : ''}`}
     >
       {children}
     </div>
