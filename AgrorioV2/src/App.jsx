@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -6,6 +6,7 @@ import FadeInSection from './components/FadeInSection'
 import './App.css'
 import logoIMG from './assets/LogoAgrorio-removebg.png'
 import ovoVIDEO from './assets/OVO.mp4'
+import ovoCapa from './assets/capaVideo1.png'
 import img1 from './assets/img1.jpeg'
 import img2 from './assets/img2.jpeg'
 import img3 from './assets/img3.jpeg'
@@ -16,6 +17,7 @@ function App() {
   const images = [img1, img2, img3, img4]
 
   const [currentImage, setCurrentImage] = useState(0)
+  const videoRef = useRef(null)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,6 +27,29 @@ function App() {
     }, 3000)
 
     return () => clearInterval(interval)
+  }, [])
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+
+          entry.target.play()
+        }else{
+          entry.target.play()
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    )
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current)
+    }
+
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -77,13 +102,14 @@ function App() {
 
                 <div class="produto-img">
                   <video
+                    ref={videoRef}
                     width="100%"
                     muted
                     playsInline
                     autoPlay
                     preload="auto"
-                    poster={logoIMG}
-                    >
+                    poster={ovoCapa}
+                  >
                     <source src={ovoVIDEO} type="video/mp4" />
                   </video>
                 </div>
