@@ -36,7 +36,7 @@ function App() {
         if (entry.isIntersecting) {
 
           entry.target.play()
-        }else{
+        } else {
           entry.target.play()
         }
       },
@@ -132,6 +132,7 @@ function App() {
             </div>
           </section>
         </FadeInSection>
+
         <FadeInSection>
           <section class="section-card">
             <div class="container">
@@ -162,6 +163,31 @@ function App() {
               </div>
 
             </div>
+          </section>
+        </FadeInSection>
+        <FadeInSection>
+          <section className="section-video">
+
+            <div className="video-header">
+              <span>POR DENTRO DA GRANJA</span>
+
+              <h2>
+                Conheça Nossa
+                <span> Produção</span>
+              </h2>
+
+              <p>
+                Transparência, cuidado e dedicação em cada etapa.
+                Veja como nossos ovos são produzidos diariamente
+                no coração de Palhano.
+              </p>
+            </div>
+
+            <div className="video-wrapper">
+              <iframe src="https://drive.google.com/file/d/1ztYTj3AOIiiTaCBMrp8_64-M4aohICkf/preview" allow="autoplay"
+                allowFullScreen></iframe>
+            </div>
+
           </section>
         </FadeInSection>
         <FadeInSection>
