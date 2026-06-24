@@ -6,6 +6,7 @@ import FadeInSection from './components/FadeInSection'
 import './App.css'
 import logoIMG from './assets/LogoAgrorio-removebg.png'
 import ovoVIDEO from './assets/OVO.mp4'
+import caixaVIDEO from './assets/caixa_animacao.mkv'
 import ovoCapa from './assets/capaVideo1.png'
 import img1 from './assets/img1.jpeg'
 import img2 from './assets/img2.jpeg'
@@ -18,6 +19,7 @@ function App() {
 
   const [currentImage, setCurrentImage] = useState(0)
   const videoRef = useRef(null)
+  const videoCaixaRef = useRef(null)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,6 +49,9 @@ function App() {
 
     if (videoRef.current) {
       observer.observe(videoRef.current)
+    }
+    if(videoCaixaRef.current) {
+      observer.observe(videoCaixaRef.current)
     }
 
     return () => observer.disconnect()
@@ -155,7 +160,19 @@ function App() {
                   </div>
 
                   <div class="card-3d">
-                    <div class="mock-3d">3D</div>
+                    <div class="mock-3d">
+                      <video
+                        ref={videoCaixaRef}
+                        width="100%"
+                        muted
+                        playsInline
+                        autoPlay
+                        preload="auto"
+                      // poster={ovoCapa}
+                      >
+                        <source src={caixaVIDEO} type="video/mp4" />
+                      </video>
+                    </div>
                   </div>
 
                 </div>
