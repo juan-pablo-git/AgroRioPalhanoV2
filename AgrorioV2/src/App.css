@@ -195,85 +195,6 @@
   padding: 40px;
 }
 
-/* Container da seção */
-.product-section {
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-  background-color: #f9f9f9;
-  /* Fundo claro para destacar o card */
-}
-
-/* O Card Verde */
-.product-card {
-  background-color: #115c34;
-  /* Verde escuro da Agrorio */
-  padding: 60px;
-  border-radius: 40px;
-  /* Bordas bem arredondadas como na imagem */
-  max-width: 900px;
-  color: white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Label superior com a linha */
-.label-container {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.line {
-  height: 2px;
-  width: 50px;
-  background-color: #00b864;
-  /* Verde brilhante */
-}
-
-.label-text {
-  font-size: 0.8rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* Títulos */
-.product-title {
-  font-family: 'Playfair Display', serif;
-  /* Fonte com serifa elegante */
-  font-size: 3.5rem;
-  line-height: 1.1;
-  margin-bottom: 30px;
-}
-
-.product-highlight {
-  color: #4ade80;
-  /* Verde claro/menta para o destaque */
-  font-style: italic;
-}
-
-/* Texto de descrição */
-.product-description {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 600px;
-  opacity: 0.9;
-  font-weight: 300;
-}
-
-/* Responsividade básica */
-@media (max-width: 768px) {
-  .product-card {
-    padding: 30px;
-    border-radius: 20px;
-  }
-
-  .product-title {
-    font-size: 2.2rem;
-  }
-}
 
 
 .section-heranca {
@@ -434,21 +355,7 @@
 }
 
 
-.card-destaque {
-  background: linear-gradient(135deg, #1e6b3a, #14532d);
-  color: white;
-  padding: 60px;
-  border-radius: 20px;
-}
 
-/* GRID PRINCIPAL */
-.card-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  /* mais espaço pro texto */
-  align-items: center;
-  gap: 40px;
-}
 
 /* TEXTO */
 .card-texto h2 {
@@ -462,13 +369,7 @@
   font-style: italic;
 }
 
-/* AREA 3D */
-.card-3d {
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 /* mock só pra visualizar */
 .mock-3d {
@@ -789,18 +690,12 @@ video::-webkit-media-controls-enclosure {
 
 /* FIREFOX */
 video {
-  pointer-events: none;
   object-fit: cover;
 
   border-radius: 20px;
 
   pointer-events: none;
   appearance: none;
-}
-
-.section-video {
-  padding: 120px 0;
-  background: #f5f5f5;
 }
 
 .video-header {
@@ -904,29 +799,7 @@ video {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.card-texto h2 {
 
-  margin: 18px 0;
-
-  font-size: 54px;
-
-  line-height: 1;
-
-  color: white;
-
-  font-family: "Playfair Display", serif;
-}
-
-.card-texto h2 span {
-
-  display: block;
-
-  margin-top: 8px;
-
-  color: #79e1a2;
-
-  font-style: italic;
-}
 
 .card-texto p {
 
@@ -971,6 +844,6 @@ video {
   transform: scale(1.02);
 }
 
-.card-video{
-    transform: translateX(50px);
+.card-video {
+  transform: translateX(50px);
 }
