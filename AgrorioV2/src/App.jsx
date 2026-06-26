@@ -50,7 +50,7 @@ function App() {
     if (videoRef.current) {
       observer.observe(videoRef.current)
     }
-    if(videoCaixaRef.current) {
+    if (videoCaixaRef.current) {
       observer.observe(videoCaixaRef.current)
     }
 
@@ -139,40 +139,48 @@ function App() {
         </FadeInSection>
 
         <FadeInSection>
-          <section class="section-card">
-            <div class="container">
+          <section className="section-card">
+            <div className="container">
 
-              <div class="card-destaque">
+              <div className="card-destaque">
 
-                <div class="card-grid">
+                <div className="card-grid">
 
-                  <div class="card-texto">
-                    <span class="tag">ORGULHO DE PALHANO</span>
+                  {/* Texto */}
+                  <div className="card-texto">
+
+                    <span className="tag">
+                      ORGULHO DE PALHANO
+                    </span>
 
                     <h2>
-                      Nosso Ovo<br />
+                      Nosso Ovo
                       <span>Caipira Premium</span>
                     </h2>
 
                     <p>
-                      A granja mais antiga, o frescor de quem colhe todos os dias e o sabor inconfundível de aves criadas com liberdade.
+                      A granja mais antiga, o frescor de quem colhe todos os dias
+                      e o sabor inconfundível de aves criadas com liberdade.
+                      Nossos ovos são resultado de uma alimentação natural,
+                      manejo humanizado e muito cuidado em cada etapa da produção.
                     </p>
+
                   </div>
 
-                  <div class="card-3d">
-                    <div class="mock-3d">
-                      <video
-                        ref={videoCaixaRef}
-                        width="100%"
-                        muted
-                        playsInline
-                        autoPlay
-                        preload="auto"
-                      // poster={ovoCapa}
-                      >
-                        <source src={caixaVIDEO} type="video/mp4" />
-                      </video>
-                    </div>
+                  {/* Vídeo */}
+                  <div className="card-video">
+
+                    <video
+                      ref={videoCaixaRef}
+                      muted
+                      autoPlay
+                      loop
+                      playsInline
+                      preload="metadata"
+                    >
+                      <source src={caixaVIDEO} type="video/mp4" />
+                    </video>
+
                   </div>
 
                 </div>
