@@ -3,7 +3,7 @@
 .hero {
   position: relative;
   height: 90vh;
-  background: url('miltomm-morro-4887986_12801.png') center/cover no-repeat;
+  background: url('/assets/miltomm-morro-4887986_12801.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   padding: 0 8%;
