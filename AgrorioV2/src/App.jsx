@@ -93,8 +93,8 @@ function App() {
               </p>
 
               <div class="hero-buttons">
-                <a href="#" class="btn primary">NOSSOS PRODUTOS</a>
-                <a href="#" class="btn secondary">NOSSA HISTÓRIA</a>
+                <a href="#produto" class="btn primary">NOSSOS PRODUTOS</a>
+                <a href="#sobre" class="btn secondary">NOSSA HISTÓRIA</a>
               </div>
             </div>
           </section>
@@ -153,7 +153,7 @@ function App() {
                       ORGULHO DE PALHANO
                     </span>
 
-                    <h2>
+                    <h2 >
                       Nosso Ovo
                       <span>Caipira Premium</span>
                     </h2>
