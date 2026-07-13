@@ -359,15 +359,26 @@
 
 /* TEXTO */
 .card-texto h2 {
-  font-size: 38px;
-  font-family: 'Playfair Display', serif;
-  color: #FFFF;
+  margin:18px 0;
+
+    font-size:54px;
+
+    line-height:1;
+
+    color:white;
+
+    font-family:"Playfair Display",serif;
 }
 
 .card-texto h2 span {
-  display: block;
-  color: #7ee2a8;
-  font-style: italic;
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#79e1a2;
+
+    font-style:italic;
 }
 
 
